@@ -1,7 +1,109 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xlr-Rb-Ahp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Ideas-->
+        <scene sceneID="AOx-Sd-npZ">
+            <objects>
+                <viewController id="CN3-2b-ABS" customClass="SecondViewController" customModule="Playground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Q3N-2T-pxP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFF-Ev-Y3m">
+                                <rect key="frame" x="42.5" y="189" width="329" height="296"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FB8-hJ-JMK">
+                                        <rect key="frame" x="8" y="18" width="49" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VPZ-2y-l37">
+                                        <rect key="frame" x="8" y="58" width="313" height="209"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="296" id="1Wj-xn-svK"/>
+                                    <constraint firstAttribute="width" constant="329" id="vwT-oR-GCf"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jid-fE-1RP">
+                                <rect key="frame" x="37" y="516" width="340" height="58"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Submit!" backgroundImage="button2"/>
+                                <connections>
+                                    <action selector="shareButton:" destination="CN3-2b-ABS" eventType="touchUpInside" id="9j4-rv-JbX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Onk-NA-Xf7"/>
+                        <color key="backgroundColor" red="0.77647058820000003" green="0.92156862750000001" blue="0.78823529410000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="sFF-Ev-Y3m" firstAttribute="centerX" secondItem="Onk-NA-Xf7" secondAttribute="centerX" id="0Bo-ah-dx1"/>
+                            <constraint firstItem="sFF-Ev-Y3m" firstAttribute="top" secondItem="Onk-NA-Xf7" secondAttribute="top" constant="44.5" id="5dB-hd-2Si"/>
+                            <constraint firstItem="Jid-fE-1RP" firstAttribute="centerX" secondItem="Onk-NA-Xf7" secondAttribute="centerX" id="AGk-Rn-Jbi"/>
+                            <constraint firstItem="Jid-fE-1RP" firstAttribute="top" secondItem="sFF-Ev-Y3m" secondAttribute="bottom" constant="31" id="ww5-ux-raZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ideas" id="Ghq-GF-IR6"/>
+                    <navigationItem key="navigationItem" id="13R-Bk-LyS"/>
+                    <connections>
+                        <outlet property="ideasView" destination="sFF-Ev-Y3m" id="1He-UP-0pJ"/>
+                        <outlet property="labelText" destination="FB8-hJ-JMK" id="V3F-QI-2OD"/>
+                        <outlet property="textview" destination="VPZ-2y-l37" id="pqe-UV-bLc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FVE-NV-gNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228.98550724637684" y="1281.6964285714284"/>
+        </scene>
+        <!--Ideas!-->
+        <scene sceneID="TTF-RH-IKD">
+            <objects>
+                <navigationController id="xlr-Rb-Ahp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ideas!" image="Love Book" selectedImage="Ball Point Pen" id="Qjd-f9-zZh"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="2WW-rP-Qmd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="100.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="39"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CN3-2b-ABS" kind="relationship" relationship="rootViewController" id="ocz-v6-PqP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UTb-Kc-N8Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229" y="590"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Ball Point Pen" width="24" height="24"/>
+        <image name="Love Book" width="24" height="24"/>
+        <image name="button2" width="340" height="58"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -8,8 +8,7 @@
 import Foundation
 
 struct TaskContainerList: Codable {
-    
-    let titleList : [String]
-    let taskList : [String]
+    let Baslık : String
+    let Görev : String
     
 }

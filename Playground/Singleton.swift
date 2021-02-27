@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import Firebase
+class firebaseSing {
+    static let sharedData = firebaseSing ()
+
+    
+
+    public init() {
+        getDataFromFirestore()
+    }
+    
+}

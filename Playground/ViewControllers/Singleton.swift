@@ -6,3 +6,18 @@
 //
 
 import Foundation
+
+class dataSingleton {
+    static let sharedCommanInf = dataSingleton()
+    
+    
+    var howManyTimesDid = Int()
+    var otherNumber = Float()
+    var taskdid = [String] ()
+    var check = false
+    
+    
+    private init () {
+        
+    }
+}

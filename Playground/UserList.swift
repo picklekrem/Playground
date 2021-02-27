@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+
+struct UserList : Codable {
+    let Email : String
+    let Fullname : String
+    let Password : String
+    let Times : Int
+    let imageURL : String
+}
+
