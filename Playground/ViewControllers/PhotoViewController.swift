@@ -25,6 +25,7 @@ class PhotoViewController: UIViewController {
         let user = Auth.auth().currentUser?.email!
         
         nameLabel.text = namelabelText
+        print("hey")
 
         
         let docRef = firestoreDatabase.collection("Usernames").document(user!).collection("Tasks")
